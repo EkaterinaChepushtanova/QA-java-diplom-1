@@ -11,19 +11,19 @@ import java.util.List;
 public class IngredientTest {
 
     @Test
-    public void ingredientGetPriceTest(){
+    public void ingredientGetPriceTest() {
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Хрустящие минеральные кольца", 300);
         Assert.assertEquals(300, ingredient.getPrice(), 0);
     }
 
     @Test
-    public void ingredientGetNameTest(){
+    public void ingredientGetNameTest() {
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Хрустящие минеральные кольца", 300);
         Assert.assertEquals("Хрустящие минеральные кольца", ingredient.getName());
     }
 
     @Test
-    public void ingredientGetTypeTest(){
+    public void ingredientGetTypeTest() {
         Ingredient ingredient = new Ingredient(IngredientType.FILLING, "Хрустящие минеральные кольца", 300);
         Assert.assertEquals(IngredientType.FILLING, ingredient.getType());
     }

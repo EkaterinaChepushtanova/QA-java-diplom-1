@@ -23,26 +23,26 @@ public class BurgerTest {
     Burger burger = new Burger();
 
     @Test
-    public void setBunsTest(){
+    public void setBunsTest() {
         burger.setBuns(bun);
         Assert.assertEquals(bun, burger.bun);
     }
 
     @Test
-    public void addIngredientTest(){
+    public void addIngredientTest() {
         burger.addIngredient(ingredient);
         Assert.assertEquals(1, burger.ingredients.size());
     }
 
     @Test
-    public void removeIngredientTest(){
+    public void removeIngredientTest() {
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
         Assert.assertTrue(burger.ingredients.isEmpty());
     }
 
     @Test
-    public void moveIngredientTest(){
+    public void moveIngredientTest() {
         burger.addIngredient(ingredient);
         burger.addIngredient(ingredient2);
         burger.moveIngredient(0, 1);
@@ -50,7 +50,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void burgerGetPriceTest(){
+    public void burgerGetPriceTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         Mockito.when(bun.getPrice()).thenReturn(100f);
@@ -59,7 +59,7 @@ public class BurgerTest {
     }
 
     @Test
-    public void burgerGetReceiptTest(){
+    public void burgerGetReceiptTest() {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         Mockito.when(bun.getName()).thenReturn("Краторная булка N-200i");
@@ -72,5 +72,4 @@ public class BurgerTest {
                 "(==== Краторная булка N-200i ====)%n" +
                 "%nPrice: 2810,000000%n"), burger.getReceipt());
     }
-
 }
